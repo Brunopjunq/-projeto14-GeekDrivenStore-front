@@ -12,7 +12,7 @@ export default function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/cart" element={<Cart />} />
-                    <Route path="/chekout" element={<Checkout />} />
+                    <Route path="/checkout" element={<Checkout />} />
                 </Routes>
             </BrowserRouter>
         </UserContext.Provider>
