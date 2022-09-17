@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
 
@@ -91,7 +91,7 @@ export default function SignUp(){
                 <input type="number" placeholder="CEP"  name="cep" value={form.cep}  onChange={changeSubmit} disabled={block} ></input>
                 <input type="text" placeholder="Nº da residencia" name="rdn" value={form.rdn} onChange={changeSubmit} disabled={block} ></input>
                 <input type="number" placeholder="DDD-Telefone" name="phone" value={form.phone} onChange={changeSubmit} disabled={block} ></input>
-                <button type="submit" > {loading} </button>
+                <button type="submit" > {loading} </button> 
             </form>
             <h3 onClick={() => navigate('/sign-in')} > ja possui uma conta? faça o login!.</h3>
         </Main>
