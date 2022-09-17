@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
+import salamence from "../../imgs/salamence.svg"
+import rayquaza from "../../imgs/rayquaza.svg"
 
 export default function SignUp(){
     const navigate = useNavigate();
@@ -80,6 +82,7 @@ export default function SignUp(){
 
     return (
         <Main>
+            <img src={salamence} height="100px" />
             <h1>GeekDriven Store</h1>
             <form onSubmit={handleSubmit} >
                 <input type='text' placeholder="Nome" name="name" value={form.name} onChange={changeSubmit} disabled={block} ></input>
@@ -121,36 +124,39 @@ gap: 15px;
             line-height: 15px;
 
             color: #D69A44;
-
-            text-decoration: underline;
         } 
 
         form {
             display: flex;
             align-items: center;
             flex-direction: column;
-            gap: 13px;
+            gap: 10px;
 
             input{
                 font-family: 'Inter', sans-serif;
                 width: 230px;
-                height: 30px;
-                border-radius: 10px;
-                border: none;
+                height: 25px;
+                border-radius: 15px;
+                border: 5px solid  orangered;
+                background-color: #f9a72e;
+                font-size: 15px;
+                outline: none;
                 padding: 7px;
 
-                font-size: 15px;
+                ::placeholder{
+                    color: red;
+                }
 
             }
 
             button {
-                width: 150px;
+                width: 120px;
                 height: 30px;
-                border-radius: 50px;
+                border-radius: 5px;
                 border: none;
                 padding: 7px;
-                background: #D69A44;
-                font-size: 15px;
+                background: #1205fb;
+                font-size: 18px;
 
                 color: #ffffff;
 
